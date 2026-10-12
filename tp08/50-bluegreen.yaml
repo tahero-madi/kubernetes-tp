@@ -1,0 +1,69 @@
+# Démo blue/green (jour 3) : deux versions complètes, un Service qui bascule
+# Bascule : kubectl patch service podinfo-bg -p '{"spec":{"selector":{"app":"podinfo-bg","version":"green"}}}'
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: podinfo-blue
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: podinfo-bg
+      version: blue
+  template:
+    metadata:
+      labels:
+        app: podinfo-bg
+        version: blue
+    spec:
+      containers:
+        - name: podinfo
+          image: ghcr.io/stefanprodan/podinfo:6.7.0
+          ports:
+            - containerPort: 9898
+          env:
+            - name: PODINFO_UI_COLOR
+              value: "#1f4fa0"
+            - name: PODINFO_UI_MESSAGE
+              value: "Version BLEUE"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: podinfo-green
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: podinfo-bg
+      version: green
+  template:
+    metadata:
+      labels:
+        app: podinfo-bg
+        version: green
+    spec:
+      containers:
+        - name: podinfo
+          image: ghcr.io/stefanprodan/podinfo:6.7.1
+          ports:
+            - containerPort: 9898
+          env:
+            - name: PODINFO_UI_COLOR
+              value: "#1f8f4f"
+            - name: PODINFO_UI_MESSAGE
+              value: "Version VERTE"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: podinfo-bg
+spec:
+  type: NodePort
+  selector:
+    app: podinfo-bg
+    version: blue
+  ports:
+    - port: 9898
+      targetPort: 9898
+      nodePort: 30081

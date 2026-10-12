@@ -1,0 +1,23 @@
+# TP7 - panne n°5 : diagnostiquez-la avec get, describe, logs, events
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: panne-5
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: panne-5
+  template:
+    metadata:
+      labels:
+        app: panne-5
+    spec:
+      containers:
+        - name: podinfo
+          image: ghcr.io/stefanprodan/podinfo:6.7.0
+          ports:
+            - containerPort: 9898
+          envFrom:
+            - configMapRef:
+                name: config-absente

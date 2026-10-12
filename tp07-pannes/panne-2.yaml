@@ -1,0 +1,31 @@
+# TP7 - panne n°2 : diagnostiquez-la avec get, describe, logs, events
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: panne-2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: panne-2
+  template:
+    metadata:
+      labels:
+        app: panne-2
+    spec:
+      containers:
+        - name: podinfo
+          image: ghcr.io/stefanprodan/podinfo:6.7.0
+          ports:
+            - containerPort: 9898
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: panne-2
+spec:
+  selector:
+    app: panne2
+  ports:
+    - port: 9898
+      targetPort: 9898

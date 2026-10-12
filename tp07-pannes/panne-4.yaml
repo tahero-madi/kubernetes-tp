@@ -1,0 +1,21 @@
+# TP7 - panne n°4 : diagnostiquez-la avec get, describe, logs, events
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: panne-4
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: panne-4
+  template:
+    metadata:
+      labels:
+        app: panne-4
+    spec:
+      containers:
+        - name: podinfo
+          image: ghcr.io/stefanprodan/podinfo:6.7.0
+          ports:
+            - containerPort: 9898
+          command: ["podinfoo"]

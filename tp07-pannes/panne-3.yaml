@@ -1,0 +1,24 @@
+# TP7 - panne n°3 : diagnostiquez-la avec get, describe, logs, events
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: panne-3
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: panne-3
+  template:
+    metadata:
+      labels:
+        app: panne-3
+    spec:
+      containers:
+        - name: podinfo
+          image: ghcr.io/stefanprodan/podinfo:6.7.0
+          ports:
+            - containerPort: 9898
+          resources:
+            requests:
+              cpu: "8"
+              memory: 64Mi

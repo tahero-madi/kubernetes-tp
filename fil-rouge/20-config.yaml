@@ -1,0 +1,10 @@
+# Fil rouge - configuration de podinfo (TP5)
+# Chaque clé devient une variable d'environnement du conteneur (envFrom)
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: podinfo-config
+  namespace: fil-rouge
+data:
+  PODINFO_UI_MESSAGE: "Bienvenue à l'INSEE"
+  PODINFO_UI_COLOR: "#2b5797"

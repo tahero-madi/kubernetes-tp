@@ -1,0 +1,19 @@
+# TP11 - un pod conforme au niveau Pod Security "restricted"
+apiVersion: v1
+kind: Pod
+metadata:
+  name: podinfo-securise
+  namespace: equipe-a
+spec:
+  securityContext:
+    runAsNonRoot: true
+    runAsUser: 10001
+    seccompProfile:
+      type: RuntimeDefault
+  containers:
+    - name: podinfo
+      image: ghcr.io/stefanprodan/podinfo:6.7.1
+      securityContext:
+        allowPrivilegeEscalation: false
+        capabilities:
+          drop: ["ALL"]

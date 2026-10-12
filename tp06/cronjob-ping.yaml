@@ -1,0 +1,18 @@
+# TP6 (bonus) - un CronJob qui interroge podinfo chaque minute
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: ping-podinfo
+  namespace: fil-rouge
+spec:
+  schedule: "*/1 * * * *"
+  successfulJobsHistoryLimit: 3
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          restartPolicy: OnFailure
+          containers:
+            - name: ping
+              image: mirror.gcr.io/library/busybox:1.36
+              command: ["wget", "-qO-", "http://podinfo:9898/version"]

@@ -1,0 +1,12 @@
+# TP4 - fichier cassé n°4 : une seule erreur à trouver
+apiVersion: v1
+kind: Pod
+metadata:
+  name: casse-4
+  labels:
+    app: casse-4
+spec:
+  containers:
+    - name: podinfo
+      image: ghcr.io/stefanprodan/podinfo:6.7.0
+      ports: 9898

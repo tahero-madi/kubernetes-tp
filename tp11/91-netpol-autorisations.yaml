@@ -1,0 +1,38 @@
+# TP11 - étape 2 : rouvrir uniquement les flux nécessaires
+# 1. tout le monde peut joindre podinfo sur le port 9898 (curl, NodePort)
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: web-vers-podinfo
+  namespace: fil-rouge
+spec:
+  podSelector:
+    matchLabels:
+      app: podinfo
+  policyTypes:
+    - Ingress
+  ingress:
+    - ports:
+        - protocol: TCP
+          port: 9898
+---
+# 2. seuls les pods podinfo peuvent joindre Redis, sur le port 6379
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: podinfo-vers-redis
+  namespace: fil-rouge
+spec:
+  podSelector:
+    matchLabels:
+      app: redis
+  policyTypes:
+    - Ingress
+  ingress:
+    - from:
+        - podSelector:
+            matchLabels:
+              app: podinfo
+      ports:
+        - protocol: TCP
+          port: 6379

@@ -1,0 +1,25 @@
+# TP7 - panne n°6 : diagnostiquez-la avec get, describe, logs, events
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: panne-6
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: panne-6
+  template:
+    metadata:
+      labels:
+        app: panne-6
+    spec:
+      containers:
+        - name: podinfo
+          image: ghcr.io/stefanprodan/podinfo:6.7.0
+          ports:
+            - containerPort: 9898
+          readinessProbe:
+            httpGet:
+              path: /readyz
+              port: 9999
+            periodSeconds: 5

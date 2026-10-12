@@ -1,0 +1,10 @@
+# TP11 - étape 1 : plus aucun trafic entrant vers les pods du namespace fil-rouge
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: refus-par-defaut
+  namespace: fil-rouge
+spec:
+  podSelector: {}
+  policyTypes:
+    - Ingress

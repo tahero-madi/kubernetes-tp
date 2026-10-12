@@ -1,0 +1,22 @@
+# TP2 - Installation de Calico par l'opérateur Tigera
+# Réseau des pods : 10.244.0.0/16, la même plage que --pod-network-cidr de kubeadm init
+# Encapsulation VXLAN : fonctionne sur tout réseau, y compris les clouds publics
+apiVersion: operator.tigera.io/v1
+kind: Installation
+metadata:
+  name: default
+spec:
+  calicoNetwork:
+    ipPools:
+      - name: default-ipv4-ippool
+        blockSize: 26
+        cidr: 10.244.0.0/16
+        encapsulation: VXLAN
+        natOutgoing: Enabled
+        nodeSelector: all()
+---
+apiVersion: operator.tigera.io/v1
+kind: APIServer
+metadata:
+  name: default
+spec: {}
