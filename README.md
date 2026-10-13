@@ -17,11 +17,27 @@ Au début du TP1, sur `k8s-cp` :
 
 ```bash
 sudo apt-get update -q && sudo apt-get install -y git unzip tmux
-git clone https://github.com/VOTRE-COMPTE/kubernetes-tp.git ~/tp
+git clone https://github.com/tahero-madi/kubernetes-tp.git ~/tp
 ls ~/tp
 ```
 
 Si le formateur modifie un fichier pendant la formation, `cd ~/tp && git pull` récupère la nouvelle version.
+
+## Corrigés
+
+Le corrigé de chaque TP est publié **à la fin de ce TP**, dans un dossier `corrige/` du TP : `tp05/corrige/`
+pour le TP5, par exemple. Il contient les réponses aux questions « Pour comprendre », les résultats attendus
+des prédictions, la solution du « À vous » et, selon le TP, les fichiers YAML attendus.
+
+Pour le lire, ouvrez le dossier du TP ici sur GitHub. Pour l'avoir aussi sur `k8s-cp` :
+
+```bash
+cd ~/tp && git pull
+ls ~/tp/tp05/corrige/
+```
+
+`git pull` ajoute les nouveaux dossiers `corrige/` sans toucher aux fichiers que vous avez modifiés.
+Cherchez d'abord par vous-même : le corrigé sert à vérifier, ou à rattraper un retard.
 
 ## Programme des TP
 
@@ -53,3 +69,4 @@ En cas de problème : [En cas de blocage](en-cas-de-blocage.md).
 | `tp04/casse-*.yaml` | Quatre fichiers YAML à réparer |
 | `fil-rouge/` | L'application podinfo + Redis, utilisée du TP5 au TP12 |
 | `tp07-pannes/` | L'énoncé du TP7 et les six pannes (ne lisez pas les fichiers `panne-N.yaml` avant d'avoir trouvé) |
+| `tpXX/corrige/` | Le corrigé du TP, publié à la fin du TP |
