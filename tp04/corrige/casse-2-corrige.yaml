@@ -1,0 +1,14 @@
+# Erreur : version: 6.7 est lu comme un nombre ; une valeur de label doit être une chaîne
+apiVersion: v1
+kind: Pod
+metadata:
+  name: casse-2
+  labels:
+    app: casse-2
+    version: "6.7"
+spec:
+  containers:
+    - name: podinfo
+      image: ghcr.io/stefanprodan/podinfo:6.7.0
+      ports:
+        - containerPort: 9898

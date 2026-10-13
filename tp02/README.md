@@ -143,4 +143,4 @@ kubectl get tigerastatus                   # état de Calico vu par son opérate
 
 ---
 
-[← TP1](../tp01/README.md) · [Sommaire](../README.md) · [En cas de blocage](../en-cas-de-blocage.md) · [TP3 →](../tp03/README.md)
+[← TP1](../tp01/README.md) · [Sommaire](../README.md) · [Corrigé](corrige/README.md) · [En cas de blocage](../en-cas-de-blocage.md) · [TP3 →](../tp03/README.md)

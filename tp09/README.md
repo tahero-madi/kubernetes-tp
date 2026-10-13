@@ -117,4 +117,4 @@ k9s -n fil-rouge          # quitter : taper :q puis Entrée
 
 ---
 
-[← TP8](../tp08/README.md) · [Sommaire](../README.md) · [En cas de blocage](../en-cas-de-blocage.md) · [TP10 →](../tp10/README.md)
+[← TP8](../tp08/README.md) · [Sommaire](../README.md) · [Corrigé](corrige/README.md) · [En cas de blocage](../en-cas-de-blocage.md) · [TP10 →](../tp10/README.md)

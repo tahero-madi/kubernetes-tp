@@ -150,4 +150,4 @@ Chiffrer les Secrets dans etcd (section 8.4 du support) : une manipulation du ma
 
 ---
 
-[← TP10](../tp10/README.md) · [Sommaire](../README.md) · [En cas de blocage](../en-cas-de-blocage.md) · [TP12 →](../tp12/README.md)
+[← TP10](../tp10/README.md) · [Sommaire](../README.md) · [Corrigé](corrige/README.md) · [En cas de blocage](../en-cas-de-blocage.md) · [TP12 →](../tp12/README.md)

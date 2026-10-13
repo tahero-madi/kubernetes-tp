@@ -150,4 +150,4 @@ kubectl delete deployment,svc hello
 
 ---
 
-[← TP2](../tp02/README.md) · [Sommaire](../README.md) · [En cas de blocage](../en-cas-de-blocage.md) · [TP4 →](../tp04/README.md)
+[← TP2](../tp02/README.md) · [Sommaire](../README.md) · [Corrigé](corrige/README.md) · [En cas de blocage](../en-cas-de-blocage.md) · [TP4 →](../tp04/README.md)

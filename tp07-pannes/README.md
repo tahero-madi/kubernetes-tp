@@ -1,6 +1,6 @@
 # TP7 — Chasse aux pannes
 
-**Jour 2, 14:30 · 60 min, en binômes.** Objectif : diagnostiquer six pannes courantes avec la méthode `get` → `describe` → `logs` → `events`, comme en production. Support : sections 10.1 à 10.7 ; le tableau 10.9 est le corrigé, ne le lisez qu'après.
+**Jour 2, 14:30 · 60 min, seul ou en binôme, selon la consigne du formateur.** Objectif : diagnostiquer six pannes courantes avec la méthode `get` → `describe` → `logs` → `events`, comme en production. Support : sections 10.1 à 10.7 ; le tableau 10.9 et le corrigé du TP donnent les réponses : ne les lisez qu'après la chasse.
 
 ## Étape 1 — Installer metrics-server
 
@@ -95,7 +95,7 @@ Correction collective de 15 minutes en fin de TP.
 
 ## À vous, sans pas-à-pas
 
-Échangez les claviers avec votre binôme : chacun casse quelque chose dans le Deployment `podinfo` de l'autre avec une seule commande (`kubectl set image` ou `kubectl set env`, par exemple), sans la montrer. Diagnostiquez avec la méthode, réparez, puis remettez le fichier en accord avec `kubectl apply -f ~/tp/fil-rouge/30-podinfo.yaml`.
+Échangez les claviers avec votre voisin : chacun casse quelque chose dans le Deployment `podinfo` de l'autre avec une seule commande (`kubectl set image` ou `kubectl set env`, par exemple), sans la montrer. Diagnostiquez avec la méthode, réparez, puis remettez le fichier en accord avec `kubectl apply -f ~/tp/fil-rouge/30-podinfo.yaml`.
 
 Indice : `kubectl rollout history` et `kubectl diff -f` montrent ce qui a changé.
 
@@ -120,4 +120,4 @@ Laissez le namespace `fil-rouge` en place : il sert tout le jour 3.
 
 ---
 
-[← TP6](../tp06/README.md) · [Sommaire](../README.md) · [En cas de blocage](../en-cas-de-blocage.md) · [TP8 →](../tp08/README.md)
+[← TP6](../tp06/README.md) · [Sommaire](../README.md) · [Corrigé](corrige/README.md) · [En cas de blocage](../en-cas-de-blocage.md) · [TP8 →](../tp08/README.md)

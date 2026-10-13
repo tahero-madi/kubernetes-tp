@@ -25,19 +25,12 @@ Si le formateur modifie un fichier pendant la formation, `cd ~/tp && git pull` r
 
 ## Corrigés
 
-Le corrigé de chaque TP est publié **à la fin de ce TP**, dans un dossier `corrige/` du TP : `tp05/corrige/`
-pour le TP5, par exemple. Il contient les réponses aux questions « Pour comprendre », les résultats attendus
-des prédictions, la solution du « À vous » et, selon le TP, les fichiers YAML attendus.
+Chaque TP a son corrigé dans un sous-dossier `corrige/` : `tp05/corrige/` pour le TP5, par exemple. Il contient
+les réponses aux questions « Pour comprendre », les résultats attendus des prédictions, la solution du « À vous »
+et, selon le TP, les fichiers YAML attendus. Lisez-le ici sur GitHub, ou sur `k8s-cp` dans `~/tp/tpXX/corrige/`.
 
-Pour le lire, ouvrez le dossier du TP ici sur GitHub. Pour l'avoir aussi sur `k8s-cp` :
-
-```bash
-cd ~/tp && git pull
-ls ~/tp/tp05/corrige/
-```
-
-`git pull` ajoute les nouveaux dossiers `corrige/` sans toucher aux fichiers que vous avez modifiés.
-Cherchez d'abord par vous-même : le corrigé sert à vérifier, ou à rattraper un retard.
+Cherchez d'abord par vous-même : le corrigé sert à vous débloquer, ou à vérifier votre travail à la fin du TP.
+Pour le TP7, ne l'ouvrez qu'après la chasse aux pannes.
 
 ## Programme des TP
 
@@ -68,5 +61,5 @@ En cas de problème : [En cas de blocage](en-cas-de-blocage.md).
 | `tp02/calico-installation.yaml` | Le réseau des pods de Calico |
 | `tp04/casse-*.yaml` | Quatre fichiers YAML à réparer |
 | `fil-rouge/` | L'application podinfo + Redis, utilisée du TP5 au TP12 |
-| `tp07-pannes/` | L'énoncé du TP7 et les six pannes (ne lisez pas les fichiers `panne-N.yaml` avant d'avoir trouvé) |
-| `tpXX/corrige/` | Le corrigé du TP, publié à la fin du TP |
+| `tp07-pannes/` | L'énoncé du TP7 et les six pannes (ne lisez ni les fichiers `panne-N.yaml` ni le corrigé avant d'avoir trouvé) |
+| `tpXX/corrige/` | Le corrigé du TP |

@@ -73,4 +73,4 @@ Pour chaque question, notez d'abord ce que l'on constate aujourd'hui sur la VM, 
 
 ---
 
-[← TP12](../tp12/README.md) · [Sommaire](../README.md) · [En cas de blocage](../en-cas-de-blocage.md)
+[← TP12](../tp12/README.md) · [Sommaire](../README.md) · [Corrigé](corrige/README.md) · [En cas de blocage](../en-cas-de-blocage.md)

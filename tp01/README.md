@@ -208,4 +208,4 @@ Indice : `ctr run -d <image> <nom> <commande>`, après un `ctr images pull`.
 
 ---
 
-[Sommaire](../README.md) · [En cas de blocage](../en-cas-de-blocage.md) · [TP2 →](../tp02/README.md)
+[Sommaire](../README.md) · [Corrigé](corrige/README.md) · [En cas de blocage](../en-cas-de-blocage.md) · [TP2 →](../tp02/README.md)

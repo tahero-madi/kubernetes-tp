@@ -204,4 +204,4 @@ kubectl delete -f ~/tp/tp06/cronjob-ping.yaml
 
 ---
 
-[← TP5](../tp05/README.md) · [Sommaire](../README.md) · [En cas de blocage](../en-cas-de-blocage.md) · [TP7 →](../tp07-pannes/README.md)
+[← TP5](../tp05/README.md) · [Sommaire](../README.md) · [Corrigé](corrige/README.md) · [En cas de blocage](../en-cas-de-blocage.md) · [TP7 →](../tp07-pannes/README.md)

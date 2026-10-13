@@ -126,4 +126,4 @@ Indice : `kubectl set resources deployment mini --requests=...` ; la LimitRange 
 
 ---
 
-[← TP7](../tp07-pannes/README.md) · [Sommaire](../README.md) · [En cas de blocage](../en-cas-de-blocage.md) · [TP9 →](../tp09/README.md)
+[← TP7](../tp07-pannes/README.md) · [Sommaire](../README.md) · [Corrigé](corrige/README.md) · [En cas de blocage](../en-cas-de-blocage.md) · [TP9 →](../tp09/README.md)

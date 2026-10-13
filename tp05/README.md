@@ -160,4 +160,4 @@ curl -s http://k8s-w1:30080 | grep message      # le nouveau message
 
 ---
 
-[← TP4](../tp04/README.md) · [Sommaire](../README.md) · [En cas de blocage](../en-cas-de-blocage.md) · [TP6 →](../tp06/README.md)
+[← TP4](../tp04/README.md) · [Sommaire](../README.md) · [Corrigé](corrige/README.md) · [En cas de blocage](../en-cas-de-blocage.md) · [TP6 →](../tp06/README.md)

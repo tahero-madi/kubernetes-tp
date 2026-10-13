@@ -181,4 +181,4 @@ Un volume local lie le pod à son nœud : si le nœud tombe, l'application atten
 
 ---
 
-[← TP11](../tp11/README.md) · [Sommaire](../README.md) · [En cas de blocage](../en-cas-de-blocage.md) · [TP13 →](../tp13/README.md)
+[← TP11](../tp11/README.md) · [Sommaire](../README.md) · [Corrigé](corrige/README.md) · [En cas de blocage](../en-cas-de-blocage.md) · [TP13 →](../tp13/README.md)

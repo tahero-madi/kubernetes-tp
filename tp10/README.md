@@ -94,4 +94,4 @@ Supprimer un namespace supprime tout ce qu'il contient : Deployments, pods, Serv
 
 ---
 
-[← TP9](../tp09/README.md) · [Sommaire](../README.md) · [En cas de blocage](../en-cas-de-blocage.md) · [TP11 →](../tp11/README.md)
+[← TP9](../tp09/README.md) · [Sommaire](../README.md) · [Corrigé](corrige/README.md) · [En cas de blocage](../en-cas-de-blocage.md) · [TP11 →](../tp11/README.md)

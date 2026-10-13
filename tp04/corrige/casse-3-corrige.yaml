@@ -1,0 +1,13 @@
+# Erreur : faute de frappe contianers -> containers
+apiVersion: v1
+kind: Pod
+metadata:
+  name: casse-3
+  labels:
+    app: casse-3
+spec:
+  containers:
+    - name: podinfo
+      image: ghcr.io/stefanprodan/podinfo:6.7.0
+      ports:
+        - containerPort: 9898
